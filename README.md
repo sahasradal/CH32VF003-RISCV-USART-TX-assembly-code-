@@ -4,8 +4,9 @@ CH32V003 USART TX RISCV assembly language code with BRONZEBEARD assembler get br
 
 tutorial1-env\Scripts\activate.bat
 
-if GPIO_asm and CH32V003_reg1.asm (inc files) are on desktop ( both files should be in the same folder) use command
+if CH32_USART_asm.asm and CH32V003_reg1.asm (inc files) are on desktop ( both files should be in the same folder) use command
 
-bronzebeard --hex-offset 0x08000000 Desktop/GPIO_asm.asm
+bronzebeard --hex-offset 0x08000000 Desktop/CH32_USART_asm.asm
 
-Use WCH_LINK_UTILITY to upload the assembled bb.out.hex file to CH32V003 chip by connceting gnd, 3.3v,DIO pins. if successful led on PD4 pin flashes
+Use WCH_LINK_UTILITY to upload the assembled bb.out.hex file to CH32V003 chip by connceting gnd, 3.3v,DIO pins. connect TX of usb/serial dongle to PD6 and RX of 
+usb/serial dongle to PD5 0f chip. open terraterm or any other console and set baud to 38400.
